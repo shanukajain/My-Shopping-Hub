@@ -1,0 +1,52 @@
+#box>div{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap:10px;
+    /* width: 95%; */
+}
+
+/* #box>div:nth-child(2){
+    display: flex;
+    justify-content: space-around;
+} */
+#box img{
+    height: 200px;
+    width: 100%;
+}
+#box1>div{
+    text-align: center;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+#box1 button{
+    margin: auto;
+    margin-bottom: 10px;
+    width: 50px;
+}
+#box1 img{
+    height: 200px;
+    width: 100%;
+}
+#box3>div{
+    text-align: center;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+#box3 img{
+    height: 400px;
+    width: 100%;
+}
+#box3{
+    margin: auto;
+    
+    /* justify-content: */
+}
+#box3>div:nth-child(2){
+    /* display: grid; */
+    /* width: 100%; */
+   
+ 
+}
