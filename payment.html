@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #top{
+        text-align: center;
+       
+    }
+    img{
+        height: 40px;
+        margin-bottom: -10px;
+    }
+    #add{
+        text-align: center;
+    }
+    #pay{
+        margin-top: 100px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <div id="top">
+        <img src="image/log.png" alt="">
+        <h3>My Shoping Hub</h3>
+    </div>
+    <hr>
+    <div id="add">
+        <h3>Address</h3>
+        <div>
+        <form action="">
+            <input type="text" placeholder="Address Line 1*">
+            <input type="text" placeholder=" Address Line 2">
+            <input type="number" placeholder="Pin-code"><br><br>
+            <input type="text" placeholder="City">
+            <input type="text" placeholder="District">
+            <input type="text" placeholder="State"><br><br>
+            <input type="submit" value="Save Address">
+        </form>
+    </div>
+    </div>
+    <div id="pay">
+     <b> <label for="">Payment Method</label></b>  
+        <select name="Payment Method" id="">
+            <option value=""></option>
+            <option value="cash">Cash on delivery</option>
+            <option value="card">Card</option>
+        </select>
+    </div>
+    <div id="payment"></div>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("click",address);
+   function address(){
+    
+   }
+</script>

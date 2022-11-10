@@ -1,0 +1,56 @@
+form{
+padding: 20px;
+/* width: 50%; */
+color: rgb(130, 133, 135);
+}
+#create_account{
+    display: flex;
+    margin-top: 100px;
+    text-align : center;
+}
+#create_account>div{
+    display: grid;
+    text-align : center;
+
+}
+
+#create{
+    background-color: rgb(115, 115, 221);
+    color: white;
+    border: 0px;
+    padding: 7px;
+    width: 50%;
+}
+#sign_in{
+    width: 50%;  
+}
+#Continue{
+    padding: 7px;
+    width: 50%;
+    background-color: rgb(208, 213, 219);
+    border: 1px solid rgb(196, 198, 199) ;
+}
+input{
+    width: 50%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#var1{
+    width: 1px;
+    height: 400px;
+    margin-left: 50px;
+    background-color: rgb(190, 192, 194);
+}
+#signin{
+background-color: rgb(14, 160, 70);
+color: white;
+    border: 0px;
+    padding: 7px;
+    width: 50%;
+
+}
+
+#sign_in>div{
+margin-top: -140px;
+
+}

@@ -43,34 +43,37 @@ let seconal_update=[
 let frame=4;
 let S_frame=0;
 display(S_frame);
+document.querySelector("#prev").addEventListener("click",prev);
+document.querySelector("#next").addEventListener("click",next);
 function prev(){
 S_frame--;
-if(S_frame<=0){
+if(S_frame<0){
     S_frame=7
 }
 display(S_frame);
 }
-function Next(){
+function next(){
     S_frame++;
-    if(S_frame==8){
-        S_frame=0;
+    if(S_frame>7){
+        S_frame=0
     }
-    display(S_frame);
+   display(S_frame);
 }
 function display(S_frame){
     document.querySelector("#seconal_update").innerText="";
     let s=S_frame
   for(i=0;i<frame;i++){
-    if(s+i>7){
+    if(s==8){
         s=0;
     }
     let div=document.createElement("div");
     let images=document.createElement("img");
-    images.setAttribute("src",seconal_update[s+i].src)
+    images.setAttribute("src",seconal_update[s].src)
     let h3=document.createElement("h3");
-    h3.innerText=seconal_update[s+i].title;
+    h3.innerText=seconal_update[s].title;
     let p=document.createElement("p");
-    p.innerText=seconal_update[s+i].details
+    p.innerText=seconal_update[s].details
+    s++;
     div.append(images,h3,p);
     document.querySelector("#seconal_update").append(div);
   }  
