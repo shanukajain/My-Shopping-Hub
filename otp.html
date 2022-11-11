@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            #top{
+        text-align: center;
+       
+    }
+    #page{
+        text-align: center;
+        margin-top: 100px;
+    }
+    </style>
+</head>
+<body>
+    <div id="top">
+        <img src="image/log.png" alt="">
+        <h3>My Shoping Hub</h3>
+    </div>
+    <hr>
+    <div id="page">
+        <input type="number"id="otp" placeholder="Enter OTP">
+       <button onclick="otpcheck()">Enter</button>
+    </div>
+</body>
+</html>
+<script>
+function otpcheck(){
+    let otp=document.querySelector("#otp").value;
+    if(otp==1234){
+        document.querySelector("#page").innerHTML=""
+        alert("order hasbeen placed");
+     
+    }else {
+        alert("Wrong otp");
+    }
+}
+</script>

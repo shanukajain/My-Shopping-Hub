@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+          #top{
+        text-align: center;
+       
+    }
+    .card{
+        margin: auto;
+        display: block;
+        justify-content: center;
+    width: 100%;
+    }
+    .card>div{
+    padding: 100px;
+    }
+    </style>
+</head>
+<body>
+    <div id="top">
+        <img src="image/log.png" alt="">
+        <h3>My Shoping Hub</h3>
+    </div>
+    <hr>
+    <div class="crad">
+        <div>       
+             <form action="otp.html">
+            <!-- otp.html -->
+        <input type="number" placeholder="enter your card no" id="num"><br>
+        <input type="text" placeholder="Card holder name"><br>
+        <input type="date" placeholder="Expire date"><br>
+        <input type="number" placeholder="CVV" id="cvv"><br>
+        <input type="submit" value="Send OTP">
+    </form>
+</div>
+
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",cardcheck);
+    function cardcheck(){
+        // event.preventdefault();
+        let num=document.querySelector("#num").value
+        num.trim().split("");
+        let cvv=document.querySelector("#cvv").value
+        cvv.trim().split("");
+        console.log(num.length,cvv.length)
+        if(num.length!=16 && cvv.length!=4){
+            event.preventDefault();
+            alert("Wrong Credentials")
+        }
+    }
+
+
+
+
+   
+</script>

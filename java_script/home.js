@@ -78,3 +78,35 @@ function display(S_frame){
     document.querySelector("#seconal_update").append(div);
   }  
 }
+function furniture(){
+    let p="Chips";
+    localStorage.setItem("filter",p);
+}
+function furniture1(){
+    let p="Car";
+    localStorage.setItem("filter",p);
+}function furniture2(){
+    let p="Towels";
+    localStorage.setItem("filter",p);
+}function furniture3(){
+    let p="Hat";
+    localStorage.setItem("filter",p);
+}function furniture4(){
+    let p="Pizza"
+    localStorage.setItem("filter",p);
+}function furniture5(){
+    let p="Salad";
+    localStorage.setItem("filter",p);
+}function furniture6(){
+    let p="Shirt";
+    localStorage.setItem("filter",p);
+}function furniture7(){
+    let p="Shoes";
+    localStorage.setItem("filter",p);
+}function furniture8(){
+    let p="Ball";
+    localStorage.setItem("filter",p);
+}function furniture9(){
+    let p="Computer";
+    localStorage.setItem("filter",p);
+}
