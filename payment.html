@@ -33,23 +33,28 @@
         <h3>Address</h3>
         <div>
         <form action="">
-            <input type="text" placeholder="Address Line 1*">
-            <input type="text" placeholder=" Address Line 2">
-            <input type="number" placeholder="Pin-code"><br><br>
-            <input type="text" placeholder="City">
-            <input type="text" placeholder="District">
-            <input type="text" placeholder="State"><br><br>
+            <input type="text" placeholder="Address Line 1*" id="add1">
+            <input type="text" placeholder=" Address Line 2" id="add2">
+            <input type="number" placeholder="Pin-code" id="pin"><br><br>
+            <input type="text" placeholder="City" id="city">
+            <input type="text" placeholder="District" id="dist">
+            <input type="text" placeholder="State" id="state"><br><br>
             <input type="submit" value="Save Address">
         </form>
     </div>
+
     </div>
     <div id="pay">
      <b> <label for="">Payment Method</label></b>  
-        <select name="Payment Method" id="">
+        <!-- <select name="Payment Method" id="method">
             <option value=""></option>
             <option value="cash">Cash on delivery</option>
-            <option value="card">Card</option>
-        </select>
+            <option value="card"><a href="card.html">Card</a></option>
+        </select> -->
+        <br>
+        <br>
+        <button onclick="cash()"> Cash on delivery</button>
+      <a href="card.html">  <button> Card</button> </a>
     </div>
     <div id="payment"></div>
 </body>
@@ -58,5 +63,27 @@
     document.querySelector("form").addEventListener("click",address);
    function address(){
     
+    let address1=document.querySelector("#add1").value;
+    let address2=document.querySelector("#add2").value;
+    let  pin=document.querySelector("#pin").value;
+    let city=document.querySelector("#city").value;
+    let  dist=document.querySelector("#dist").value;
+    let state=document.querySelector("#state").value;
+    let obj={
+        address1,address2,pin,city,dist,state
+    }
+
    }
+   function cash(){
+        document.querySelector("#add").innerHTML="";
+        document.querySelector("#pay").innerHTML=""
+        let h3=document.createElement("h3");
+        h3.innerText="order has been placed";
+        let button1=document.createElement("button");
+        button1.value="Continue"
+        let a=document.querySelector("a"); 
+        a.href=alert("your order has been placed");
+        document.querySelector("#payment").append(a);
+    }
+
 </script>

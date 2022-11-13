@@ -6,13 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://kit.fontawesome.com/b06a377e67.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style_sheet/nav.css">
-   <link rel="stylesheet" href="style_sheet/box.css">
+    <link rel="stylesheet" href="style_sheet\nav.css">
+    <style>
+        #product{
+            margin-top: 160px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+    </style>
 </head>
 <body>
     <div  id="nav">
         <div>
-              <img src="image\log.png" alt="">
+             <a href="home.html"> <img src="image\log.png" alt=""></a>
               <h5>My Shoping Hub</h5>
           </div>
               <div>
@@ -20,9 +26,9 @@
                   <button><i class="fa-solid fa-magnifying-glass"></i></button>
               </div>
               <div>
-                <a href="account.html"><i class="fa-solid fa-user"></i></a>
-            <h5>Account</h5>
-        </div>
+                 <a href="account.html"> <i class="fa-solid fa-user"></i></a>
+              <h5>Account</h5>
+          </div>
           <div>
               <i class="fa-solid fa-heart"></i>
                           <h5>Wish List</h5>
@@ -34,8 +40,8 @@
       </div>
       
       <div id="topbar">
-        <hr>
-        <div>
+          <hr>
+          <div>
           <a href="list.html"><p onclick="furniture()" id="fur">Furniture</p></a>
           <a href="list.html"><p onclick="furniture1()" id="fur1">Rugs</p></a>
               <a href="list.html"><p onclick="furniture2()" id="fur2">Decor</p></a>
@@ -46,23 +52,27 @@
                                   <a href="list.html"><p onclick="furniture7()" id="fur7">Lighting</p></a>
                                       <a href="list.html"><p onclick="furniture8()" id="fur8">Kids&Baby</p></a>
                                           <a href="list.html"><p onclick="furniture9()" id="fur9">More</p></a>
-    <div id="var"></div>
-        <p> Ideas</p>
-        <p style="color: red;">Sales & Deals</p>
-    </div>
-    <hr>
-    </div>
-    <hr>
-  <div id="list">
+      <div id="var"></div>
+          <p> Ideas</p>
+          <p style="color: red;">Sales & Deals</p>
+      </div>
+      <hr>
+      </div>
+      <hr>
 
-  </div>
-  <div id="price">
-    <h3 id="totalprice"></h3>
-    <a href="payment.html"><button>Payment</button></a>
-  </div>
+      
+
+<div id="product">
+
+</div>
+
+
+
+
+
       <div id="bottom">
         <div>
-        <p><b>My Account</b></p>
+        <a href="account.html"><p><b>My Account</b></p></a>
         <p>Order& Refund</p>
         <p>Email Preferences</p>
         <p>Account Settings</p>
@@ -92,4 +102,31 @@
     </div>
 </body>
 </html>
-<script src="java_script/cart.js" ></script>
+<script>
+let elem=JSON.parse(localStorage.getItem("product"));
+console.log(elem);
+let card=JSON.parse(localStorage.getItem("Addtocart"))||[];
+display();
+function display(){
+        let div=document.createElement("div");   
+        let imge=document.createElement("img")
+        imge.setAttribute("src",elem.image);
+        let h3=document.createElement("h3")
+        h3.innerText=elem.Product_name;
+        let des=document.createElement("p")
+        des.innerText=elem.description;
+        let cost=document.createElement("p")
+        cost.innerText="Price : "+elem.price;
+        let rating=document.createElement("p")
+        rating.innerText="Rating(out of 100):"+elem.ratings
+        let butt=document.createElement("button")
+        butt.innerText="Add to cart";
+        butt.addEventListener("click",function(){
+            card.push(elem);
+            console.log(card);
+            localStorage.setItem("Addtocart",JSON.stringify(card));
+        });
+        div.append(imge,h3,des,cost,rating,butt)
+        document.querySelector("#product").append(div);
+    }
+</script>
